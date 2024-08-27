@@ -1,0 +1,45 @@
+{
+  "level": 4,
+  "title":"Nivel 4",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 4",
+      "body": "<h3>Consigna</h3><p>Creá un engranaje cuyo número de dientes sea 25. Introducile velocidad al engranaje hasta que alcance las 20 RPM. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><ul><li>Creá un engranaje de 25 dientes (Z = 25)</li><li>Hacé girar el engranaje con una velocidad de 20 RPM</li></ul>"
+    },
+    "validate":{
+      "header":"Validación",
+      "body":"¿Deseas verificar tu respuesta?"
+    }
+  },
+  "rules": {
+    "708a6b8d-5108-40f6-b496-cfb19c8e19b3": {
+      "id": "708a6b8d-5108-40f6-b496-cfb19c8e19b3",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 25,
+        "property": "numberOfTeeth",
+        "target": "none"
+      }
+    },
+    "782fdf98-a060-45c6-bbed-fbe466f98043": {
+      "id": "782fdf98-a060-45c6-bbed-fbe466f98043",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "useAbsoluteMagnitud": true,
+        "value": 20,
+        "property": "rpm",
+        "target": "none"
+      }
+    },
+    "0bfefea7-de3f-4b8d-9467-1f98a674732d": {
+      "id": "0bfefea7-de3f-4b8d-9467-1f98a674732d",
+      "ruleType": "number_of_gears",
+      "properties": {
+        "value": 1
+      }
+    }
+  }
+}
+
+
+

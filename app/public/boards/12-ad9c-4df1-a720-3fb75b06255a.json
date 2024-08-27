@@ -1,0 +1,78 @@
+{
+	"level": 12,
+  "title":"Nivel 12",
+	"modals":{
+		"objectives": {
+			"header": "Nivel 12",
+			"body": "<h3>Consigna</h3><p>Armar el siguiente sistema de engranajes y calcular cuántas veces girará el engranaje <strong>A</strong> por cada giro del engranaje <strong>D</strong>. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><p>Armar el siguiente tren de engranajes:</p><ul><li>Engranaje A:<ul><li>Z=20</li><li>Engranaje conductor (input)</li><li>Conectado con B</li></ul></li><li>Engranaje B:<ul><li>Z=40</li><li>Conectado con A</li><li>Gira en solidario con C (mismo eje)</li></ul></li><li>Engranaje C:<ul><li>Z=10</li><li>Gira en solidario con B (mismo eje)</li></ul></li><li>Engranaje D:<ul><li>Z=40</li><li>Engranaje conducido (output)</li><li>Conectado con C</li></ul></li></ul>"
+		},
+	  "validationPassed":{
+		"header":"¡Muy bien!",
+		"body":"Por cada giro del engranaje D el engranaje A girará 8 veces."
+	  }
+	},
+	"rules": {
+		"c80dd064-6698-411c-88e8-c653b5942ab7": {
+			"id": "c80dd064-6698-411c-88e8-c653b5942ab7",
+			"ruleType": "check_continuity"
+		},
+		"98d9bdb6-fbd2-471a-96a6-1f95a2487c3b": {
+			"id": "98d9bdb6-fbd2-471a-96a6-1f95a2487c3b",
+			"ruleType": "check_property_equals",
+			"properties": {
+				"value": 20,
+				"property": "numberOfTeeth",
+				"target": "input_gear"
+			}
+		},
+		"7dfb6e9e-e711-41ed-88b6-f8db5f437652": {
+			"id": "7dfb6e9e-e711-41ed-88b6-f8db5f437652",
+			"ruleType": "check_property_equals",
+			"properties": {
+				"value": 40,
+				"property": "numberOfTeeth",
+				"target": "output_gear"
+			}
+		},
+	  "d61dc40b-eef0-41fd-9058-8b2725706013": {
+		"id": "d61dc40b-eef0-41fd-9058-8b2725706013",
+		"ruleType": "check_property_equals",
+		"properties": {
+		  "value": 40,
+		  "property": "numberOfTeeth",
+		  "target": 1
+		}
+	  },
+	  "75731b33-0d7c-4bb7-8006-e208690e12a5": {
+		"id": "75731b33-0d7c-4bb7-8006-e208690e12a5",
+		"ruleType": "check_property_equals",
+		"properties": {
+		  "value": 10,
+		  "property": "numberOfTeeth",
+		  "target": 2
+		}
+	  }
+	},
+	"inputs": {
+		"2a97fd5c-b20c-44a8-af32-16d404d432bf": {
+			"id": "2a97fd5c-b20c-44a8-af32-16d404d432bf",
+			"inputType": "number",
+			"correctValue": "8",
+			"actualValue": "",
+			"properties": {
+				"objective": "¿Cuántas veces girará el engranaje A por cada giro del engranaje D?",
+				"beforeInputText": "Respuesta: ",
+				"afterInputText": "veces"
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

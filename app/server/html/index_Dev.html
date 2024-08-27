@@ -1,0 +1,222 @@
+<!--
+By Frank Leenaars, Department of Instructional Technology, University of Twente
+Source code at https://github.com/frankleenaars/gearsketch
+Licensed under the MIT license
+
+Demo hand icon by momentum (http://momentumdesignlab.com/)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GearSketch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="../../../css/sidebar.css" rel="stylesheet">
+	
+    <style type="text/css">
+        body, html {margin: 0; height: 100%; overflow: hidden;}
+    </style>
+</head>
+<!--
+<body onload="new window.gearsketch.GearSketch();">-->
+<body onload="setTimeout(function(){new window.gearsketch.GearSketch();},500)">
+<!--<div id="wrapper" class="toggled">-->
+
+    <!--&lt;!&ndash; Sidebar &ndash;&gt;-->
+    <!--<div id="sidebar-wrapper">-->
+        <!--<ul class="sidebar-nav">-->
+            <!--<li class="sidebar-brand">-->
+                <!--<a href="#">-->
+                    <!--Start Bootstrap-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Dashboard</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Shortcuts</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Overview</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Events</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">About</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Services</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Contact</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /#sidebar-wrapper &ndash;&gt;-->
+
+    <!--&lt;!&ndash; Page Content &ndash;&gt;-->
+    <!--<div id="page-content-wrapper">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-12" id="canvasHolder">-->
+                    <!--<canvas id="gearsketch_canvas" ></canvas>-->
+                    <!--&lt;!&ndash;<a href="#menu-toggle" class="btn btn-default menu-toggle">Toggle Menu</a>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /#page-content-wrapper &ndash;&gt;-->
+
+<!--</div>-->
+<!-- /#wrapper -->
+<canvas id="gearsketch_canvas" ></canvas>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="submitAnswerModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Submit Answer</h4>
+            </div>
+            <div class="modal-body">
+                <form id="inputs" class="form-horizontal">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Verify answer</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="objectivesModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- something went wrong Modal -->
+<div class="modal fade" id="somethingWentWrong" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ups</h4>
+            </div>
+            <div class="modal-body">
+                Parece que no has completado el ejercicio correctamente, vuelve a intentarlo!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- este modal creo qeu lo voy a sacarModal -->
+<div class="modal fade" id="validationsPassed" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Felicidades</h4>
+            </div>
+            <div class="modal-body">
+                Felicitaciones!! has pasado!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/gearsketch/hammer.min.js"></script>
+
+<!-- mingo saca esto cuando vayas a produccion-->
+<!--<script type="text/javascript" src="gearsketch_util.js"></script>-->
+<!--<script type="text/javascript" src="gearsketch_model.js"></script>-->
+<!--<script type="text/javascript" src="gearsketch_main.js"></script>-->
+
+<script type="text/javascript" src="../js/gearsketch/coffee-script.js"></script>
+<script type="text/coffeescript" src="../js/gearsketch/gearsketch_util.coffee"></script>
+<script type="text/coffeescript" src="../js/gearsketch/gearsketch_model.coffee"></script>
+<script type="text/coffeescript" src="../js/gearsketch/gearsketch_main.coffee"></script>
+<!-- Menu Toggle Script -->
+<script>
+//    $(".menu-toggle").click(function(e) {
+//        e.preventDefault();
+//        $("#wrapper").toggleClass("toggled");
+//    });
+//    window.setInterval(function(){
+//        //$("#wrapper").toggleClass("toggled");
+//        $('#submitAnswerModal').modal('toggle')
+//    }, 5000);
+
+var gearsketch;
+var canvas;
+runOnResize = function() {
+    if(gearsketch!=null && gearsketch != undefined)
+        gearsketch.updateCanvasSize();
+
+    canvas = document.getElementById('gearsketch_canvas');
+    canvas.width = $(window).width()-30;
+    canvas.height = $(window).height();
+}
+
+runOnLoad = function(){
+    runOnResize()
+}
+window.onresize = runOnResize
+
+window.onload = function(){
+    setTimeout(function () {
+        gearsketch = new window.gearsketch.GearSketch()
+        runOnLoad()
+        $('#submitAnswerModal .btn-success').click(function (e) {
+            gearsketch.verify()
+        })
+
+    }, 300);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+
+mongod.lnk
+
+.idea/*
+.idea/
+projectFilesBackup/
+
+app/server/modules/email-settings-mine.js
+
+*.map

@@ -1,0 +1,39 @@
+extends layout
+
+- user = typeof(udata) != 'undefined' ? udata : { }
+
+
+block content
+
+    div.container
+        div.col-lg-12
+            h1.page-header Niveles
+
+        div.col-lg-12.thumb
+            a.img-thumbnail.centerBlock(href="/board")
+                img.img-responsive(src="img/levels/sandbox.png")
+
+        div.row
+            each val, index in unlocked
+                div.col-lg-3.col-md-4.col-xs-6.thumb
+                    a.img-thumbnail.centerBlock(href="/board#"+val)
+                        img.img-responsive(src="img/levels/"+doneLevelImages[val])
+            each val, index in locked
+                div.col-lg-3.col-md-4.col-xs-6.thumb
+                    - var current = index ===0;
+                    if current
+                        a.img-thumbnail.centerBlock(href="/board#" + val)
+                            img.img-responsive(src="img/levels/"+openLevelImages[val])
+                    else
+                        a.img-thumbnail.centerBlock(href="#")
+                            img.img-responsive(src="img/levels/"+lockedLevelImages[val])
+
+            //include modals/unlock-code
+
+block scripts
+    script(src='/vendor/jquery-2.2.3.min.js')
+    script(src='/vendor/jquery.form.min.js')
+    script(src='/vendor/bootstrap.min.js')
+    script(src='/js/views/home.js')
+    script(src='/js/controllers/homeController.js')
+    script(src='/js/form-validators/accountValidator.js')

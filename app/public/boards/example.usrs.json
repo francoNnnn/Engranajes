@@ -1,0 +1,22 @@
+{
+  "megamingus":{
+    user:"megamingus",
+    levels:{
+      "ewerwer":{
+        id:"ewerwer",
+        level:1,
+        wrong_validations:4,
+        completed:true,
+        times:[20,55,66,84],
+        completed_time: 77
+      },
+      "fghfghfg":{
+        id:"fghfghfg",
+        level:2,
+        wrong_validations:3,
+        completed:false,
+        times:[20,66,84]
+      }
+    }
+  }
+}

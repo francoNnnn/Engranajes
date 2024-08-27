@@ -1,0 +1,106 @@
+{
+  "board": {
+    "chains" : {  },
+    "inputGear": "bcf228f9-b967-477c-995d-1f806c5458f0",
+    "outputGear": "5ce55a0d-645a-45ad-824e-1c04e07920d0",
+    "gears" : {
+      "5ce55a0d-645a-45ad-824e-1c04e07920d0" : {
+        "connections" : {  },
+         "group" : 1,
+      "id" : "5ce55a0d-645a-45ad-824e-1c04e07920d0",
+      "innerRadius" : 97.5,
+      "level" : 0,
+      "location" : { "x" : 651.4489795918367,
+        "y" : 338.0816326530612
+      },
+      "momentum" : 0,
+      "numberOfTeeth" : 40,
+      "outerRadius" : 111,
+      "pitchRadius" : 105,
+      "rotation" : 0
+    },
+      "bcf228f9-b967-477c-995d-1f806c5458f0" : {
+        "connections" : {  },
+        "group" : 0,
+        "id" : "bcf228f9-b967-477c-995d-1f806c5458f0",
+        "innerRadius" : 46.5,
+        "level" : 0,
+        "location" : {
+          "x" : 368.48148148148147,
+          "y" : 352
+        },
+        "rpm" : 10,
+        "numberOfTeeth" : 20,
+        "outerRadius" : 60,
+        "pitchRadius" : 54,
+        "rotation" : 0
+      }
+    }
+  }
+  ,
+  "level": 7,
+  "title":"Nivel 7",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 7",
+      "body": "<h3>Consigna</h3><p>Dado el siguiente sistema ¿qué elemento podrías utilizar para lograr que tanto input como output giren en el mismo sentido sabiendo que las RPM del input no pueden modificarse? Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p>"
+    },
+    "validationPassed":{
+      "header":"¡Excelente!",
+      "body":" La cadena transmite el movimiento del engranaje conductor al engranaje conducido"
+    },
+    "validate":{
+      "header":"Validación",
+      "body":"¿Deseas verificar tu respuesta?"
+    }
+  },
+  "rules": {
+    "8381e9ac-8411-48fd-8d88-f2ac02861707": {
+      "id": "8381e9ac-8411-48fd-8d88-f2ac02861707",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 20,
+        "property": "numberOfTeeth",
+        "target": "input_gear"
+      }
+    },
+    "554410f6-8fa8-4589-846e-fa909094c85a": {
+      "id": "554410f6-8fa8-4589-846e-fa909094c85a",
+      "ruleType": "check_property_greater_than",
+      "properties": {
+        "value": 0,
+        "property": "rpm",
+        "target": "input_gear"
+      }
+    },
+    "c7fcb5da-a4af-42a1-b30c-0cf304c04e04": {
+      "id": "c7fcb5da-a4af-42a1-b30c-0cf304c04e04",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 40,
+        "property": "numberOfTeeth",
+        "target": "output_gear"
+      }
+    },
+    "0b36c9c6-b207-4ded-9e89-03fac1da36f1": {
+      "id": "0b36c9c6-b207-4ded-9e89-03fac1da36f1",
+      "ruleType": "check_property_greater_than",
+      "properties": {
+        "value": 0,
+        "property": "rpm",
+        "target": "output_gear"
+      }
+    },
+    "ab6fa966-ec6c-4eaa-a375-17193f325bf5": {
+      "id": "ab6fa966-ec6c-4eaa-a375-17193f325bf5",
+      "ruleType": "check_chain_existence",
+      "properties": {
+        "value": true
+      }
+    }
+  }
+}
+
+
+
+

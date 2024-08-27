@@ -1,0 +1,68 @@
+//
+   Created by Megamingus on 14/09/2016.
+
+extends layout
+block links
+    link(rel='stylesheet', href="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/b-1.2.2/b-html5-1.2.2/b-print-1.2.2/fh-3.1.2/r-2.1.0/datatables.min.css")
+
+- user = typeof(udata) != 'undefined' ? udata : { }
+
+
+block content
+
+    div.container
+        div.col-lg-12
+            h1.page-header Estadisticas
+
+        div.row
+            table.display(id="data" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th
+                            |Usuario
+                        th
+                            |Nivel
+                        th
+                            |Completado
+                        th
+                            |Tiempo para completarlo
+                        th
+                            |Intentos fallidos
+                        th
+                            |Promedio de tiempo de intentos fallidos
+
+                tbody
+                    each val, index in data
+                        tr
+                            td
+                                |#{val.user}
+                            td
+                                |Nivel #{val.level}
+                            td
+                                | #{val.completed}
+                            td
+                                | #{val.timeCompleted}
+                            td
+                                | #{val.wrongTries}
+                            td
+                                | #{val.wrongAvgTIme}
+
+        div.row
+            br
+            br
+            a(href="/csv")
+                button
+                    |Descargar en formato CSV
+
+block scripts
+    script(src='/vendor/jquery-2.2.3.min.js')
+    script(src='/vendor/jquery.form.min.js')
+    script(src="https://cdn.datatables.net/v/zf-5.5.2/jq-2.2.3/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/b-1.2.2/b-html5-1.2.2/b-print-1.2.2/fh-3.1.2/r-2.1.0/datatables.min.js")
+
+    script
+        | $(document).ready(function() {
+        |     $('#data').DataTable( {
+        |     paging: false
+        | });
+        | } );
+

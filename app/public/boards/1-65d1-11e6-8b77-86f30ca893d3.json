@@ -1,0 +1,38 @@
+{
+  "level": 1,
+  "title":"Nivel 1",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 1",
+      "body": "<h3>Consigna</h3><p>Creá tu primer engranaje. Para esto, deberás dibujar sobre la pantalla un círculo y asignarle un sentido de giro.</p><p>Luego animalo haciendo click sobre el botón <strong>PLAY</strong>.</p><p> Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><ul><li>Creá tu primer engranaje</li><li>Asignale un sentido de giro (horario o antihorario)</li><li>Hacelo girar (Click en el botón play)</li></ul>"
+    },
+    "validate":{
+      "header":"Validación",
+      "body":"¿Deseas verificar tu respuesta?"
+    }
+
+  },
+  "rules": {
+    "a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c": {
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c",
+      "ruleType": "check_property_not_equals",
+      "properties": {
+        "value": 0,
+        "property": "rpm",
+        "target": "none"
+      }
+    },
+    "a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c": {
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c",
+      "ruleType": "number_of_gears",
+      "properties": {
+        "value": 1
+      }
+    }
+
+  }
+}
+
+
+
+

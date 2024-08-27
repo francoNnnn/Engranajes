@@ -1,0 +1,41 @@
+{
+  "level": 2,
+  "title":"Nivel 2",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 2",
+      "body": "<h3>Consigna</h3><p>Creá un engranaje cuyo radio sea 75. Utilizá el botón del signo más (+) para modificar el número de dientes. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><ul><li>Creá un engranaje de radio 75 (r=75)</li>"
+    }
+  },
+  "rules": {
+    "e281d39a-445c-49ff-806f-9da391cdedef": {
+      "id": "e281d39a-445c-49ff-806f-9da391cdedef",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 25,
+        "property": "numberOfTeeth",
+        "target": "none"
+      }
+    },
+    "5bc2d38d-381a-43ec-824a-fe1c1f0a6f74": {
+      "id": "5bc2d38d-381a-43ec-824a-fe1c1f0a6f74",
+      "ruleType": "number_of_gears",
+      "properties": {
+        "value": 1
+      }
+    }
+  },
+  "inputs": {
+    "2a97fd5c-b20c-44a8-af32-16d404d432bf": {
+      "id": "2a97fd5c-b20c-44a8-af32-16d404d432bf",
+      "inputType": "number",
+      "correctValue": "25",
+      "actualValue": "",
+      "properties": {
+        "objective": "¿Cuál es el número de dientes de este engranaje? (Z=?)",
+        "beforeInputText": "Respuesta: Z = ",
+        "afterInputText": "dientes"
+      }
+    }
+  }
+}

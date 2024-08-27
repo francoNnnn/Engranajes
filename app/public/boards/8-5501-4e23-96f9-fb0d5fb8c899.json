@@ -1,0 +1,136 @@
+{
+
+  "board": {
+    "chains" : {  },
+    "gears" : {
+      "5ff3eb61-08fa-4e4f-b801-40587ca9becf" : {
+        "connections" : {  },
+      "group" : 1,
+      "id" : "5ff3eb61-08fa-4e4f-b801-40587ca9becf",
+      "innerRadius" : 148.5,
+      "level" : 0,
+      "location" : {
+        "x" : 733.3965517241379,
+        "y" : 324.37931034482756
+      },
+      "momentum" : 0,
+      "numberOfTeeth" : 40,
+      "outerRadius" : 162,
+      "pitchRadius" : 156,
+      "rotation" : 0
+    },
+      "b07f0c26-bb1e-46e5-ad83-b60787e29f46" : {
+        "connections" : {
+          "c52710f4-ce20-4d33-8d3e-c4230fdb43b4" : "axis"
+        },
+        "group" : 0,
+        "id" : "b07f0c26-bb1e-46e5-ad83-b60787e29f46",
+        "innerRadius" : 82.5,
+        "level" : 0,
+        "location" : {
+          "x" : 349.0888888888889,
+          "y" : 329.73333333333335
+        },
+        "rpm" : 20,
+        "numberOfTeeth" : 30,
+        "outerRadius" : 96,
+        "pitchRadius" : 90,
+        "rotation" : 0
+      },
+      "c52710f4-ce20-4d33-8d3e-c4230fdb43b4" : {
+        "connections" : {
+          "b07f0c26-bb1e-46e5-ad83-b60787e29f46" : "axis"
+        },
+        "group" : 0,
+        "id" : "c52710f4-ce20-4d33-8d3e-c4230fdb43b4",
+        "innerRadius" : 43.5,
+        "level" : 1,
+        "location" : {
+          "x" : 349.0888888888889,
+          "y" : 329.73333333333335
+        },
+        "momentum" : 0,
+        "numberOfTeeth" : 13,
+        "outerRadius" : 57,
+        "pitchRadius" : 51,
+        "rotation" : 0
+      }
+    },
+    "inputGear": "b07f0c26-bb1e-46e5-ad83-b60787e29f46",
+    "outputGear": "5ff3eb61-08fa-4e4f-b801-40587ca9becf"
+  },
+
+  "level": 8,
+  "title":"Nivel 8",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 8",
+      "body": "<h3>Consigna</h3><p>Dado el siguiente sistema, lograr que el engranaje conducido (output) gire en sentido antihorario a 6,5 RPM. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><p>La velocidad inicial del engranaje <strong>input</strong> es de 20 RPM.</p>"
+    },
+    "validate":{
+      "header":"Validación",
+      "body":"¿Deseas verificar tu respuesta?"
+    }
+  },
+  "rules": {
+
+    "98d9bdb6-fbd2-471a-96a6-1f95a2487c3b": {
+      "id": "98d9bdb6-fbd2-471a-96a6-1f95a2487c3b",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 30,
+        "property": "numberOfTeeth",
+        "target": "input_gear"
+      }
+    },
+    "eb7c75cf-aa86-4628-8bdb-aab92e8b1e48": {
+      "id": "eb7c75cf-aa86-4628-8bdb-aab92e8b1e48",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 20,
+        "property": "rpm",
+        "target": "input_gear"
+      }
+    },
+    "7dfb6e9e-e711-41ed-88b6-f8db5f437652": {
+      "id": "7dfb6e9e-e711-41ed-88b6-f8db5f437652",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 40,
+        "property": "numberOfTeeth",
+        "target": "output_gear"
+      }
+    },
+    "3a0fa9dd-8045-44db-9bbe-fef2566dbbb3": {
+      "id": "3a0fa9dd-8045-44db-9bbe-fef2566dbbb3",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": -6.5,
+        "property": "rpm",
+        "target": "output_gear"
+      }
+    },
+    "6978716e-62b5-45ce-bf11-1b9c0347ffcf": {
+      "id": "6978716e-62b5-45ce-bf11-1b9c0347ffcf",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 13,
+        "property": "numberOfTeeth",
+        "target": "1"
+      }
+    },
+    "da2fda4a-fece-40e5-94c3-96687c7e86ad": {
+      "id": "da2fda4a-fece-40e5-94c3-96687c7e86ad",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 20,
+        "property": "rpm",
+        "target": "1"
+      }
+    }
+  }
+}
+
+
+
+

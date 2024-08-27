@@ -1,0 +1,67 @@
+{
+
+	"level": 5,
+  	"title":"Nivel 5",
+	"modals":{
+		"objectives": {
+			"header": "Nivel 5",
+			"body": "<h3>Consigna</h3><p>Creá dos engranajes. Asignale a uno de estos engranajes el rol de conductor y al otro el rol de conducido. Luego conectá los engranajes, haciendo que el input gire en sentido horario. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><ul> <li>Creá 2 engranajes</li><li>Un engranaje deberá ser el conductor y el otro el conducido. Asignale a un engranaje el rol de conductor (<strong>input</strong>) y al otro el de conducido (<strong>output</strong>)</li><li>Conectá los engranajes</li><li>El engranaje conductor (<strong>input</strong>) deberá girar en sentido horario </li></ul>"
+		}
+	},
+	"rules": {
+		"c80dd064-6698-411c-88e8-c653b5942ab7": {
+			"id": "c80dd064-6698-411c-88e8-c653b5942ab7",
+			"ruleType": "check_continuity"
+		},
+		"a1cb70a0-2b33-49a4-bbf6-36d65aa06084": {
+			"id": "a1cb70a0-2b33-49a4-bbf6-36d65aa06084",
+			"ruleType": "check_property_greater_than",
+			"properties": {
+				"value": 0,
+				"property": "rpm",
+				"target": "input_gear"
+			}
+		},
+		"df8bf157-b228-474b-83dc-6487a6560ec7": {
+			"id": "df8bf157-b228-474b-83dc-6487a6560ec7",
+			"ruleType": "check_property_greater_than",
+			"properties": {
+				"value": 0,
+				"property": "numberOfTeeth",
+				"target": "input_gear"
+			}
+		},
+		"4197542f-e76b-4c9b-8a6b-a85b134d6931": {
+			"id": "4197542f-e76b-4c9b-8a6b-a85b134d6931",
+			"ruleType": "check_property_greater_than",
+			"properties": {
+				"value": 0,
+				"property": "numberOfTeeth",
+				"target": "output_gear"
+			}
+		},
+		"ff240e8b-5076-4a7c-8a4d-2f23ccda99b9": {
+			"id": "ff240e8b-5076-4a7c-8a4d-2f23ccda99b9",
+			"ruleType": "number_of_gears",
+			"properties": {
+				"value": 2
+			}
+		}
+	},
+	"inputs": {
+	  "a5ss8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c": {
+		"id": "a5ss8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c",
+		"inputType": "radio",
+		"correctValue": "Sentido antihorario",
+		"actualValue": "",
+		"properties": {
+		  "objective": "¿En qué sentido gira el engranaje conducido?",
+		  "options": ["Sentido horario" , "Sentido antihorario"]
+		}
+	  }
+
+	}
+}
+
+
+

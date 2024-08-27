@@ -1,0 +1,25 @@
+{
+	"level": 1,
+	"objectives": {
+  		"header": "Nivel 1",
+ 		"body": "<h3>Consigna</h3><p>Creá tu primer engranaje. Para esto, deberás dibujar sobre la pantalla un círculo y asignarle un sentido de giro.</p><div><h4>Ejemplo img</h4></div><div><img src='http://www.lyceumgenk.be/leren/media/ehbo/techniek/1/meerdere%20tandwielen2.jpg'/></div><p> Luego animalo haciendo click sobre el botón de PLAY.</p><p> Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong></p>"
+	},
+	"rules": {
+		"a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c": {
+			"id": "a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c",
+			"ruleType": "check_property_not_equals",
+			"properties": {
+				"value": 0,
+				"property": "rpm",
+				"target": "none"
+			}
+		},
+		"a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c": {
+			"id": "a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c",
+			"ruleType": "number_of_gears",
+			"properties": {
+				"value": 1
+			}
+		}
+	}
+}

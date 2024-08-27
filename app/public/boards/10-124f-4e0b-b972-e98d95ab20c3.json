@@ -1,0 +1,117 @@
+{
+  "board": {
+    "chains" : {  },
+    "gears" : {
+      "0a36f20b-81fd-4d88-9c02-7b82de08f115" : {
+        "connections" : {
+          "e116880f-7b9a-4a60-90b7-3ca96d61ce25" : "meshing"
+        },
+      "group" : 0,
+      "id" : "0a36f20b-81fd-4d88-9c02-7b82de08f115",
+      "innerRadius" : 58.5,
+      "level" : 0,
+      "location" : {
+        "x" : 644,
+        "y" : 303.29343173113801
+      },
+      "rpm" : 20,
+      "numberOfTeeth" : 24,
+      "outerRadius" : 72,
+      "pitchRadius" : 66,
+      "rotation" : -0.39628154226271145
+    },
+      "e116880f-7b9a-4a60-90b7-3ca96d61ce25" : {
+        "connections" : {
+          "0a36f20b-81fd-4d88-9c02-7b82de08f115" : "meshing"
+        },
+        "group" : 0,
+        "id" : "e116880f-7b9a-4a60-90b7-3ca96d61ce25",
+        "innerRadius" : 22.5,
+        "level" : 0,
+        "location" : {
+          "x" : 535.8121675954233,
+          "y" : 319.17681246222804
+        },
+        "momentum" : 0,
+        "numberOfTeeth" : 12,
+        "outerRadius" : 36,
+        "pitchRadius" : 30,
+        "rotation" : 0.8111664789427586
+      }
+    },
+    "inputGear": "0a36f20b-81fd-4d88-9c02-7b82de08f115",
+    "outputGear": "e116880f-7b9a-4a60-90b7-3ca96d61ce25"
+  },
+  "level": 10,
+  "title":"Nivel 10",
+  "modals":{
+    "objectives": {
+      "header": "Nivel 10",
+      "body": "<h3>Consigna</h3><p>Dado el siguiente sistema con un engranaje conducido de 12 dientes y un engranaje conductor de 24 dientes. Calcular la relación de transmisión. Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p><p>La velocidad inicial del engranaje <strong>input</strong> es de 20 RPM.</p>"
+    },
+    "validationPassed":{
+      "header":"¡Muy bien!",
+      "body":"El engranaje conducido girará 6 veces en sentido antihorario (Relación de transmisión = 12/24 = ½ = 1:2)"
+    }
+  },
+  "rules": {
+
+    "98d9bdb6-fbd2-471a-96a6-1f95a2487c3b": {
+      "id": "98d9bdb6-fbd2-471a-96a6-1f95a2487c3b",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 24,
+        "property": "numberOfTeeth",
+        "target": "input_gear"
+      }
+    },
+    "eb7c75cf-aa86-4628-8bdb-aab92e8b1e48": {
+      "id": "eb7c75cf-aa86-4628-8bdb-aab92e8b1e48",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 20,
+        "property": "rpm",
+        "target": "input_gear"
+      }
+    },
+    "7dfb6e9e-e711-41ed-88b6-f8db5f437652": {
+      "id": "7dfb6e9e-e711-41ed-88b6-f8db5f437652",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 12,
+        "property": "numberOfTeeth",
+        "target": "output_gear"
+      }
+    }
+  },
+  "inputs": {
+    "2a97fd5c-b20c-44a8-af32-16d404d432bf": {
+      "id": "2a97fd5c-b20c-44a8-af32-16d404d432bf",
+      "inputType": "number",
+      "correctValue": "6",
+      "actualValue": "",
+      "properties": {
+        "objective": "Si el engranaje conductor gira 3 veces en sentido horario, ¿cuántas veces girará el engranaje conducido?",
+        "beforeInputText": "Respuesta: ",
+        "afterInputText": "veces"
+      }
+    },
+    "716f6816-0919-458f-baf4-788591206bd9": {
+      "id": "716f6816-0919-458f-baf4-788591206bd9",
+      "inputType": "radio",
+      "correctValue": "Antihorario",
+      "actualValue": "",
+      "properties": {
+        "objective": "¿En qué sentido?",
+        "options": ["Horario" , "Antihorario"]
+      }
+    }
+
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,235 @@
+{
+  "board": {
+    "gears": {
+      "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5f4c": {
+        "location": {
+          "x": 670.0087772651266,
+          "y": 254.99528282158715
+        },
+        "rotation": 0.5250208202357358,
+        "numberOfTeeth": 32,
+        "id": "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5f4c",
+        "momentum": 0,
+        "group": 0,
+        "level": 0,
+        "connections": {
+          "1346c049-3898-4ddc-b0fe-7ce9acd79dff": "meshing"
+        },
+        "rpm": -22.6875,
+        "arrowHead": null,
+        "pitchRadius": 96,
+        "innerRadius": 88.5,
+        "outerRadius": 102
+      },
+      "1346c049-3898-4ddc-b0fe-7ce9acd79dff": {
+        "location": {
+          "x": 844.2368421052631,
+          "y": 310.9736842105263
+        },
+        "rotation": 0.12874396780651143,
+        "numberOfTeeth": 29,
+        "id": "1346c049-3898-4ddc-b0fe-7ce9acd79dff",
+        "momentum": 0,
+        "group": 0,
+        "level": 0,
+        "connections": {
+          "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5f4c": "meshing",
+          "f7e2b134-273a-4845-bd65-33c628fc938a": "meshing"
+        },
+        "rpm": 0,
+        "arrowHead": null,
+        "pitchRadius": 87,
+        "innerRadius": 79.5,
+        "outerRadius": 93
+      },
+      "a7cdb7c0-de12-4e02-8f08-0d72833de271": {
+        "location": {
+          "x": 1164.105993813372,
+          "y": 232.4451816458159
+        },
+        "rotation": 5.084534430428889,
+        "numberOfTeeth": 22,
+        "id": "a7cdb7c0-de12-4e02-8f08-0d72833de271",
+        "momentum": 0,
+        "group": 0,
+        "level": 0,
+        "connections": {
+          "f7e2b134-273a-4845-bd65-33c628fc938a": "meshing",
+          "4aa23320-cece-4f53-9307-40d18d86b2f0": "meshing"
+        },
+        "arrowHead": null,
+        "pitchRadius": 66,
+        "innerRadius": 58.5,
+        "outerRadius": 72
+      },
+      "4aa23320-cece-4f53-9307-40d18d86b2f0": {
+        "location": {
+          "x": 1308.8846199249429,
+          "y": 305.1304581552023
+        },
+        "rotation": 5.094439645929571,
+        "numberOfTeeth": 32,
+        "id": "4aa23320-cece-4f53-9307-40d18d86b2f0",
+        "momentum": 0,
+        "group": 0,
+        "level": 0,
+        "connections": {
+          "a7cdb7c0-de12-4e02-8f08-0d72833de271": "meshing"
+        },
+        "rpm": -22.687499999999996,
+        "arrowHead": null,
+        "pitchRadius": 96,
+        "innerRadius": 88.5,
+        "outerRadius": 102
+      },
+      "f7e2b134-273a-4845-bd65-33c628fc938a": {
+        "location": {
+          "x": 1029.4713444472127,
+          "y": 327.8312979838415
+        },
+        "rotation": 0.8665723803888952,
+        "numberOfTeeth": 33,
+        "id": "f7e2b134-273a-4845-bd65-33c628fc938a",
+        "momentum": 0,
+        "group": 0,
+        "level": 0,
+        "connections": {
+          "1346c049-3898-4ddc-b0fe-7ce9acd79dff": "meshing",
+          "a7cdb7c0-de12-4e02-8f08-0d72833de271": "meshing"
+        },
+        "rpm": -21.999999999999993,
+        "arrowHead": null,
+        "pitchRadius": 99,
+        "innerRadius": 91.5,
+        "outerRadius": 105
+      }
+    },
+    "chains": {
+
+    },
+    "inputGear": "f7e2b134-273a-4845-bd65-33c628fc938a",
+    "outputGear": "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5f4c"
+  },
+  "level": 1,
+  "title":"This is a sample board",
+  "modals":{
+    "validate":{
+      "header":"Nivel 1",
+      "body":"Listo para validar?"
+    },
+    "validationError":{
+      "header":"Error",
+      "body": "Parece que hay algo mal, ¡vuelve a intentar!"
+    },
+    "validationPassed":{
+      "header":"Felicitaciones",
+      "body":"Has pasado el nivel!"
+    },
+    "backToMenu":{
+      "header":"Woah!",
+      "body":"Cuidado vaquero!, si continuas por este camino perderas tu trabajo.",
+      "performAction": "Vale!, si me la he pasado tirado"
+    },
+    "objectives": {
+      "header": "Nivel 1",
+      "body": "<h3>Consigna</h3><p>Creá tu primer engranaje. Para esto, deberás dibujar sobre la pantalla un círculo y asignarle un sentido de giro.</p><div><h4>Ejemplo img</h4></div><div><img src='http://www.lyceumgenk.be/leren/media/ehbo/techniek/1/meerdere%20tandwielen2.jpg'/></div><p> Luego animalo haciendo click sobre el botón de PLAY.</p><p> Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong></p><ul><li>Creá tu primer engranaje</li><li>Asignale un sentido de giro (horario o antihorario)</li><li>Hacelo girar (Click en el botón play)</li></ul>"
+    }
+  },
+  "rules": {
+    "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c": {
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c",
+      "ruleType": "check_property_greater_than",
+      "properties": {
+        "useAbsoluteMagnitud": true,
+        "value": 33,
+        "property": "rpm",
+        "target": "output_gear"
+      }
+    },
+    "a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c": {
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0f99ccf5g4c",
+      "ruleType": "check_property_less_than",
+      "properties": {
+        "value": -1,
+        "property": "momentum",
+        "target": "input_gear"
+      }
+    },
+
+    "a54a5d-d8ca-40bf-b4cd-e0f99ccf5g4c": {
+      "id": "a54a5d-d8ca-40bf-b4cd-e0f99ccf5g4c",
+      "ruleType": "check_property_greater_than",
+      "properties": {
+        "value": 1,
+        "property": "momentum",
+        "target": 1
+      }
+    },
+    "a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c": {
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0f8hccf5g4c",
+      "ruleType": "number_of_gears",
+      "properties": {
+        "value": 5
+      }
+    },
+    "a54a8a5d-d8ca-40bf-b4cd-e0fgfccf5g4c": {
+      "comentario": "este es un ejemplo de una regla qeu chekquea la propeji",
+      "id": "a54a8a5d-d8ca-40bf-b4cd-e0fgfccf5g4c",
+      "ruleType": "check_property_equals",
+      "properties": {
+        "value": 33,
+        "property": "numberOfTeeth",
+        "target": "input_gear"
+      }
+    },
+    "aecab464-c70e-4ff8-b6cf-c10b6be42507": {
+      "id": "aecab464-c70e-4ff8-b6cf-c10b6be42507",
+      "ruleType": "check_continuity"
+    }
+  },
+  "inputs": {
+    "a5ss8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c": {
+      "id": "a5ss8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c",
+      "inputType": "number",
+      "correctValue": "50",
+      "actualValue": "",
+      "properties": {
+        "objective": "Para pasar el test tiene que decir 50",
+        "beforeInputText": "Respuesta: Z=",
+        "afterInputText": "dientes"
+      }
+    },
+    "aaac": {
+      "id": "aaac",
+      "inputType": "radio",
+      "correctValue": "Opcion 3",
+      "actualValue": "",
+      "properties": {
+        "objective": "Selecciona la Opcion 3 ",
+        "options": ["Opcion 1" , "Opcion 2", "Opcion 3", "Opcion 4"]
+      }
+    },
+    "a5hs8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c": {
+      "id": "a5hs8a5d-d8ca-40bf-b4cd-e0f8fccf5g4c",
+      "inputType": "text",
+      "correctValue": "muchas",
+      "actualValue": "",
+      "properties": {
+        "objective": "Que velocidad final tendraengranaje de salida o \"Output\" ? (muchas)",
+        "beforeInputText": "Respuesta:",
+        "afterInputText": "rpm"
+      }
+    },
+    "aac": {
+      "id": "aac",
+      "inputType": "radio",
+      "correctValue": "Rexona",
+      "actualValue": "",
+      "properties": {
+        "objective": "Quien no te abandona",
+        "options": ["La mona jimenes" , "Rexona", "Tu sombra", "Los ideales comunistas"]
+      }
+    }
+  },
+  "checksPassed": false
+}

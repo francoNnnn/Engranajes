@@ -1,0 +1,97 @@
+{
+	"board":{
+	  "gears": {
+		"fc91ac16-540f-4912-8773-938799eba8c9": {
+		  "location": {
+			"x":432.4881514201935,
+			"y":292.96019514799815
+		  },
+		"rotation":-0.11802350202463203,
+		  "numberOfTeeth":15,
+		  "id":"fc91ac16-540f-4912-8773-938799eba8c9",
+		  "momentum":1.7090047572505205,
+		  "group":0,
+		  "level":0,
+		  "connections":{
+			"ab6fa966-ec6c-4eaa-a375-17193f325bf6":"meshing"
+		  },
+		  "pitchRadius":45,
+		  "innerRadius":37.5,
+		  "outerRadius":51
+		},
+		"ab6fa966-ec6c-4eaa-a375-17193f325bf6":{"location":{"x":585.2075471698113,"y":283.6981132075472},"rotation":-0.08026925696020265,"numberOfTeeth":36,"id":"ab6fa966-ec6c-4eaa-a375-17193f325bf6","momentum":0,"group":0,"level":0,"connections":{"fc91ac16-540f-4912-8773-938799eba8c9":"meshing"},"pitchRadius":108,"innerRadius":100.5,"outerRadius":114},
+		"ed043496-e867-4a78-857e-f95197747827":{"location":{"x":492.8636363636364,"y":471.6818181818182},"rotation":0,"numberOfTeeth":12,"id":"ed043496-e867-4a78-857e-f95197747827","momentum":0,"group":1,"level":0,"connections":{},"pitchRadius":36,"innerRadius":28.5,"outerRadius":42}
+	  },
+	  "chains":{},
+	  "inputGear": "fc91ac16-540f-4912-8773-938799eba8c9",
+	  "outputGear": "ab6fa966-ec6c-4eaa-a375-17193f325bf6"
+
+	},
+  "level": 6,
+  "title":"Nivel 6",
+	"modals":{
+		"objectives": {
+			"header": "Nivel 6",
+			"body": "<h3>Consigna</h3><p>Dado el siguiente sistema ¿cómo utilizarías el engranaje de menor radio para lograr que tanto input como output giren en el mismo sentido? Para verificar si lo realizado es correcto utilizá el botón <strong>VERIFICAR</strong>.</p>"
+		},
+	  "validationPassed":{
+		"header":"¡Muy bien!",
+		"body":"Al engranaje de menor radio se lo conoce como rueda loca"
+	  },
+	  "validate":{
+		"header":"Validación",
+		"body":"¿Deseas verificar tu respuesta?"
+	  }
+	},
+	"rules": {
+		"90b7bd54-95e5-422f-b7f8-983cd88419f0": {
+			"id": "90b7bd54-95e5-422f-b7f8-983cd88419f0",
+			"ruleType": "check_continuity"
+		},
+		"d9f929f8-e7ec-4ccb-8aab-a100282244bb": {
+			"id": "d9f929f8-e7ec-4ccb-8aab-a100282244bb",
+			"ruleType": "check_property_less_than",
+			"properties": {
+				"value": 0,
+				"property": "rpm",
+				"target": 1
+			}
+		},
+		"fcf26192-04a5-4072-8beb-7c96a0908aa8": {
+			"id": "fcf26192-04a5-4072-8beb-7c96a0908aa8",
+			"ruleType": "check_property_greater_than",
+			"properties": {
+				"value": 0,
+				"property": "rpm",
+				"target": "input_gear"
+			}
+		},
+		"17bc05af-3220-4b6f-8221-e481fe361b4a": {
+			"id": "17bc05af-3220-4b6f-8221-e481fe361b4a",
+			"ruleType": "check_property_greater_than",
+			"properties": {
+				"value": 0,
+				"property": "rpm",
+				"target": "output_gear"
+			}
+		},
+		"acdfbc09-9642-439d-90b8-94be766205ae": {
+			"id": "acdfbc09-9642-439d-90b8-94be766205ae",
+			"ruleType": "number_of_gears",
+			"properties": {
+				"value": 3
+			}
+		},
+		  "afdfbc09-9642-4b6f-8221-e481fe361b4a": {
+			"id": "afdfbc09-9642-4b6f-8221-e481fe361b4a",
+			"ruleType": "check_chain_existence",
+			"properties": {
+			  "value": false
+			}
+
+		}
+	}
+}
+
+
+
